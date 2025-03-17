@@ -41,12 +41,12 @@
     </script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
         <h1>LMS - Learning Management System</h1>
     </header>
     <div>
-        <nav>
+        <nav class="nav">
             <a href="index.html">Homepage</a>
         </nav>
     </div>
@@ -54,7 +54,7 @@
     <main class="login">
         <h2>LMS Login</h2>
         <form onsubmit="validateLogin(event)">
-            <div class="container">
+            <div class="logincontainer">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required><br>
                 
@@ -62,15 +62,19 @@
                 <input type="password" id="password" name="password" required><br>
             </div>
             <br><br>
-            <div> 
+            <div class="login-btn"> 
                 <a href="course_view.html">
                     <button class="loginbutton">Login</button>
             </div>
         </form> 
         <br><br>
-        <a href="#">Forgot Password?</a>
+        <div class="forgotpassword">
+            <a href="#">Forgot Password?</a>
+        </div>
         <br>
+        <div class="noaccount">
         <a href="signup.html">Dont have an account? Sign Up</a>
+        </div>
         <br><br>
         <div id="message-box"></div>
         <br>
