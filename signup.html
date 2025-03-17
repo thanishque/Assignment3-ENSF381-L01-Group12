@@ -20,7 +20,7 @@
 
             const usernameRegex = /^[A-Za-z][A-Za-z0-9_-]{2,19}$/;
             if (!usernameRegex.test(username)) {
-                errorMessages.push("Invalid Username: Username must be between 3 and 20 characters, start with a letter, and contain only letters, numbers, hyphens, and underscores.");
+                errorMessages.push("Invalid Username: Username must be between 3 and 20 characters, and only letters, numbers, hyphens, and underscores are allowed.");
             }
 
             const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+\[\]{}|;:'",.<>?\/`~]).{8,}$/;
@@ -54,12 +54,12 @@
     </script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
         <h1>LMS - Learning Management System</h1>
     </header>
     <div>
-        <nav>
+        <nav class="nav">
             <a href="index.html">Homepage</a>
         </nav>
     </div>
@@ -67,7 +67,7 @@
     <main class="signup">
         <h2>Sign Up</h2>
         <form onsubmit="validateSignup(event)">
-            <div class="container">
+            <div class="signupcontainer">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required><br>
                 
@@ -87,10 +87,13 @@
         </form> 
 
         <br><br>
-        <div id="message-box" style="display: none;"></div>
+        <div id="message-box" class="message-box"></div>
 
         <br><br>
-        <a href="login.html">Already have an account? Login here</a>
+        <div class="haveaccount">
+            <a href="login.html">Already have an account? Login here</a>
+        </div>
+        
         <br><br>
 
     </main>     
