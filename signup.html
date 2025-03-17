@@ -39,11 +39,11 @@
 
             if (errorMessages.length > 0) {
                 messageBox.innerHTML = errorMessages.join('<br>');
-                messageBox.className = 'message-box error';
+                messageBox.className = 'message-box';
                 messageBox.style.display = 'block';
             } else {
                 messageBox.innerHTML = 'Signup successful! Redirecting to login...';
-                messageBox.className = 'message-box success';
+                messageBox.className = 'message-box';
                 messageBox.style.display = 'block';
 
                 setTimeout(() => { 
@@ -88,8 +88,8 @@
 
         <br><br>
         <div id="message-box" class="message-box"></div>
-
         <br><br>
+
         <div class="haveaccount">
             <a href="login.html">Already have an account? Login here</a>
         </div>
